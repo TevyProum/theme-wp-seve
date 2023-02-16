@@ -1,0 +1,785 @@
+/*
+ Theme Name:   Seve
+ Theme URI:    https://lesenchanteurs.fr
+ Description:  Thème SEVE
+ Author:       Les Enchanteurs
+ Author URI:   https://lesenchanteurs.fr
+ Version:      1.0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('composants/composants.css');
+
+
+/* GENERAL + TYPO */
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    font-family: 'Jost', sans-serif;
+    color: #464C60;
+    margin: 0px;
+}
+h1, h2, h3, h4, h5, .newsletter-titre, .cat {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+h1, h2 {
+    font-size: 40px;
+}
+h3, .newsletter-titre {
+    font-size: 24px; 
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+h4 {
+    font-size: 16px;
+}
+h5, .cat {
+    font-size: 12px;
+    font-weight: 600;
+}
+p, ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #464C60;
+    list-style: none;
+}
+ul {
+    position: relative;
+}
+li {
+    padding-bottom: 15px
+}
+li:before {
+    font-family: 'Jost';
+    font-size: 50px;
+    content: '\002022';
+    color: #7EB02B;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: -24px;
+}
+.chiffre,
+.pourcentage {
+    font-family: Jost;
+    font-weight: bold;
+    font-size: 88px;
+    line-height: 127px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #7EB02B;
+}
+.pourcentage { 
+    font-size: 48px;
+}
+a {
+    text-decoration: none;
+    color: #464C60;
+    transition: all 0.3s ease-in-out;
+}
+a:hover {
+    color: #7EB02B;
+}
+img {
+    max-width: 100%;
+}
+.current-menu-item a {
+    color: #7EB02B!important;
+}
+.container-xxs {
+    max-width: 350px;
+}
+.container-xs {
+    max-width: 450px;
+}
+.container-s {
+    max-width: 850px;
+    margin: auto; 
+    padding: 20px;
+}
+.container-m {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+}
+.container-l {
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+.container-xl {
+    width: 100%;
+}
+.absolute {
+    position: absolute;
+    z-index:2;
+}
+.center {
+    text-align: center;
+    margin: auto
+}
+#scrollUp {
+    position: fixed;
+    bottom : 10px;
+    right: 0px;
+    opacity: 0.5;
+    z-index: 9999;
+}
+#scrollUp img {
+    transform: rotate(90deg);
+}
+
+
+/* BOUTONS CTA */
+.cta,
+input#gform_submit_button_1.gform_button.button,
+.cta-newsletter {
+    background: #7EB02B;
+    border: 2px solid #7EB02B;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 56px;
+    padding: 13px 24px 13px 50px;
+    max-width: max-content;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.cta {
+    display: table;
+    margin-top: 40px;
+}
+.cta.center {
+    margin-bottom: 20px;
+}
+.cta:hover,
+.header-white .cta:hover {
+    color: white;
+    background: none!important;
+    border: 2px solid white;
+}
+footer .cta:hover,
+.cta.bloc:hover,
+.single .cta.center:hover,
+.header-black .header-contact.cta:hover,
+.projet .cta:hover,
+.error404 .cta:hover {
+    background: #7EB02B!important;
+    border: 2px solid #7EB02B;
+}
+.cta::before {
+    content: url(/wp-content/uploads/2021/09/fleche.svg);
+    position: absolute;
+    bottom: 23%;
+    left: 8%;
+}
+.cta.transparent {
+    background: none!important;
+    border: 2px solid #FFFFFF;
+}
+.icones-flex .cta.transparent {
+    margin: 40px 10px 50px 10px;
+}
+.cta.transparent:hover {
+    background: #7EB02B!important;
+    border: 2px solid #7EB02B;
+    color: white;
+}
+.icones-flex .cta.transparent:hover {
+    border: 2px solid white;
+}
+.cta.transparent::before {
+    content: url(/wp-content/uploads/2021/09/fleche-bas.svg);
+    bottom: 20%;
+    left: 7%;
+}
+input#gform_submit_button_1.gform_button.button {
+    border: 0px;
+    padding: 13px 24px 13px 24px;
+    position: relative;
+}
+.email-newsletter, .name-newsletter {
+    width: 400px;
+    padding: 14px;
+    border-radius: 25px;
+    border: 1px solid #D6E8BA;
+}
+.name-newsletter {
+    max-width: 185px;
+}
+.home .name-newsletter {
+    max-width: 200px;
+}
+.mc4wp-success {
+    max-width: 400px;
+}
+.mc4wp-form-fields {
+    position: relative;
+}
+.cta-newsletter {
+    border: 0px;
+    padding: 8px 18px 8px 18px;
+    letter-spacing: normal;
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+}
+.cta.creation {
+    background: none!important;
+    border: 2px solid #7EB02B;
+    margin: 40px 0px 50px 0px;
+}
+.cta.creation {
+    color: #7EB02B;
+}
+.cta.creation::before {
+    content: url(/wp-content/uploads/2021/09/fleche-verte.svg);
+    bottom: 21%;
+    left: 5%;
+}
+.cta.transparent.ensavoirplus::before {
+    content:'\f543';
+    display: inline-block;
+    font: normal 20px 'dashicons';
+    margin-bottom: -1px;
+    margin-left: -3px;
+}
+select, textarea, input {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none; */
+    border: none;
+}
+#input_1_17_other, #input_1_16_other {
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+}
+
+
+/* HEADER + FOOTER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.header-logo {
+    margin: 0px 50px;
+    width: 150px;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+div.header-contact.cta {
+    padding: 20px 50px 20px 30px!important;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+.header-contact.cta::before {
+    content: '';
+}
+.header-contact.cta::after {
+    content: url(/wp-content/uploads/2021/09/fleche.svg);
+    margin-left: 20px;
+}
+.header-contact a {
+    color: white!important;
+}
+.header-white a {
+    color: white;
+}
+.header-white a:hover {
+    color: #7EB02B;
+}
+.header-white .current_page_item a {
+    color: #7EB02B;
+}
+footer {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+footer img {
+    margin: 20px;
+}
+footer .cta {
+    margin: 0px 20px;
+}
+.logo-footer {
+    max-width: 200px;
+    margin-top: 60px;
+}
+.barre-separation {
+    border-top: 1px solid #D2D2D2;
+    position: absolute;
+    top: 20%;
+    z-index: -1;
+    width: 100%;
+}
+.newsletter {
+    background: #F3F9EB;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 35px 45px;
+    position: relative;
+    justify-content: center;
+}
+.enveloppe {
+    position: absolute;
+    left: 18%;
+    bottom: -120%;
+}
+.texte-inscription {
+    max-width: 350px;
+    font-weight: 600;
+    text-align: left;
+    padding: 0px 40px;
+}
+.social {
+    border-radius: 50%;
+    border: 1px solid #7BAC2B;
+    margin: 25px 15px;
+    transition: all 0.3s ease-in-out;
+    max-height: 62px;
+}
+.center .social {
+    padding: 15px;
+}
+.social:hover,
+.social:focus {
+    background: #F3F9EB;
+}
+.reseaux-contact,
+.menu-footer ul,
+.menu-header-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    list-style: none;
+    padding-left: 0px;
+}
+.menu-header-container li,
+.menu-footer-container li {
+    padding: 0px 25px;
+}
+.menu-footer li:first-child::before,
+.menu-header-container li:first-child::before,
+#menu-association li:first-child::before {
+    content:'';
+    margin: 0px;
+}
+.menu-footer-container li:before {
+    font-size: 35px;
+    margin-left: -31px;
+    margin-top: 2px;
+}
+.menu-header-container li:before {
+    margin-top: 3px;
+}
+ul#menu-association,
+ul#menu-atelier {
+    display: flex;
+    justify-content: center;
+    font-family: 'Jost';
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+ul#menu-association li,
+ul#menu-atelier li {
+    padding: 0px 25px;
+}
+ul#menu-association li::before,
+ul#menu-atelier li::before {
+    display: none;
+}
+.menu-association-container, .menu-atelier-container {
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: -20px;
+    padding-bottom: 18px;
+}
+.menu-secondaire.floatable {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background: white;
+    padding-top: 25px;
+    z-index: 5;
+}
+.menu-secondaire a:hover {
+    color: #464C60;
+}
+.menu-secondaire a:after {
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    height: 5px;
+    background-color: #7EB02B;
+    content: '';
+}
+.actif {
+    font-weight: bold;
+    position: relative;
+}
+.actif:after {
+    width: 100%;
+}
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #cecece;
+    padding: 25px 15px;
+    border-radius: 12px;
+    width: 300px;
+    right: 65%;
+    transition: all 0.6s ease-in-out;
+}
+ul.sub-menu li::before {
+    display: none;
+}
+ul.sub-menu a {
+    color: #464C60;
+    line-height: 30px;
+    transition: all 0.3s ease-in-out;
+}
+ul.sub-menu a:hover {
+    color: #464C60;
+    font-weight: 800;
+}
+.menu-item-has-children:hover .sub-menu,
+.menu-item-has-children:active .sub-menu {
+    display: block;
+    flex-direction: column;
+}
+.menu-item-has-children::after {
+    content:'\f347';
+    display: inline-block;
+    font: normal 12px 'dashicons';
+}
+.header-white .menu-item-has-children::after {
+    color: white;
+}
+#mobile {
+    display: none;
+}
+
+
+/* 404 */
+.page404 {
+    text-align: center;
+    margin-top: 70px;
+}
+.page404 .cta {
+    margin: 50px auto;
+}
+.page404 p {
+    font-family: 'Jost';
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+
+/* PAGINATION */
+nav.navigation.pagination {
+    margin: 0px auto 80px auto;
+}
+.nav-links {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+a.page-numbers {
+    border-radius: 50%;
+    padding: 5px 14px;
+    border: 2px solid #464C60;
+}
+span.page-numbers.current {
+    border-radius: 50%;
+    padding: 5px 14px;
+    background: #464C60;
+    color: white;
+    border: 2px solid #464C60;
+}
+a.next.page-numbers,
+a.prev.page-numbers {
+    display:none;
+}
+
+
+/* SVG animé */
+.wheel {
+    animation: rotation 60s infinite linear;
+    position: absolute;
+    top: -80%;
+    left: 0;
+	right: 0;
+	margin: 0 auto
+}
+
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+.container-xl.hero {
+    overflow: hidden;
+}
+.anime {
+    padding-top: 60px;
+}
+
+
+/* RESPONSIVE */ 
+@media screen and (max-device-width : 480px)  {
+    h1, h2, h3, h4, h5, .newsletter-titre, .cat {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    h1, h2 {
+        font-size: 24px;
+    }
+    h3, .newsletter-titre {
+        font-size: 16px; 
+    }
+    p.texte-inscription {
+        text-align: center;
+        padding: 10px 0px;
+    }
+    .enveloppe {
+        max-width: 56px;
+    }
+    .newsletter {
+        justify-content: center;
+        padding: 50px 35px 20px 35px;
+    }
+    .email-newsletter {
+        width: 250px; 
+    }
+    .name-newsletter, .home .name-newsletter {
+        max-width: 280px; 
+        margin: 10px;
+    }
+    .name-newsletter {
+        max-width: 250px; 
+    }
+    .home .email-newsletter {
+        width: 280px!important; 
+    }
+    h4, span.categorie {
+        font-size: 12px;
+    }
+    h5, .cat {
+        font-size: 10px;
+    }
+    .cta.creation::before {
+        bottom: 30%;
+    }
+    .cta::before {
+        left: 6%;
+    }
+    .header-logo {
+        margin: 0px 20px;
+        max-width: 132px;
+    }
+    .menu-footer ul {
+        width: 200px;
+        margin: auto;
+        padding-left: 0px;
+        margin-bottom: 40px;
+    }
+    .menu-footer li {
+        margin-top: 35px;
+    }
+    .menu-footer-container li:before {
+        position: absolute;
+        left: 62%;
+        margin-top: -25px;
+    }
+    p.copyright {
+        max-width: 210px;
+        margin: auto;
+    }
+    .container-xxs {
+        padding: 50px 0px 0px 0px;
+    }
+    .chiffre {
+        font-size: 64px;
+    }
+    .pourcentage {
+        font-size: 24px;
+    }
+    .menu-item-has-children.menu-item-61::after {
+        position: absolute;
+        top: 6%;
+        right: 55%;
+        color: black;
+    }
+    ul#menu-association li, ul#menu-atelier li {
+        padding: 0px 20px;
+    }
+    ul#menu-association, ul#menu-atelier {
+        display: block;
+    }
+    .menu-secondaire a:after {
+        display: none 
+    }
+    .menu-association-container, .menu-atelier-container {
+        margin-top: -30px;
+        padding: 0px;
+        text-align: center;
+    }
+    .menu-secondaire ul {
+        padding-left: 0px;
+    }
+    .wheel {
+        display: none;
+    }
+    .icones-flex .cta.transparent {
+        margin: 40px 10px 0px 10px;
+    }
+    .anime {
+        position: initial;
+        margin: 40px 0px;
+    }
+    .cta.transparent::before {
+        content: url(/wp-content/uploads/2021/09/fleche-bas.svg);
+        bottom: 20%;
+        left: 5%;
+    }
+    .cta {
+        padding: 13px 20px 13px 40px;
+    }
+    .cta-newsletter {
+        right: 5%;
+        bottom: 2%;
+    }
+}
+
+/* MENU BURGER */
+@media screen and (max-device-width : 1024px)  {
+    #mobile {
+        display: block;
+    }
+    #mobile ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    #mobile li::before {
+        display: none;
+    }
+    #mobile li {
+        padding: 15px 0px;
+    }
+    #mobile ul a {
+        color: #464C60;
+    }
+    #mobile ul a:focus {
+        color: #7EB02B;
+    }
+    #mobile ul.sub-menu {
+        display: block;
+        position: relative;
+        border: none;
+        padding: 0px;
+        left: 0%;
+        font-size: 14px!important;
+        padding-top: 12px;
+    }
+    #mobile .sub-menu li {
+        padding: 0px 0px 0px 10px;
+    }
+    #desktop {
+        display: none;
+    }
+    .header-mobile {
+        background: white;
+        color: #464C60;
+        border-radius: 12px;
+        position: absolute;
+        height: auto;
+        width: 65%;
+        left: 4%;
+        padding: 20px 50px 40px 50px;
+        z-index: 99;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .contact-mobile {
+        margin: 20px auto 0px auto;
+        padding: 18px 55px 18px 25px;
+    }
+    .contact-mobile a {
+        color:#FFFFFF;
+    }
+    div.cta.contact-mobile::after {
+        content: url(/wp-content/uploads/2021/09/fleche.svg);
+        position: absolute;
+        bottom: 35%;
+        right: 11%;
+    }
+    div.cta.contact-mobile::before {
+        display: none;
+    }
+    .burger {
+        max-width: 56px;
+        margin-right: 20px;
+    }
+    .hmax {
+        height: 100vh;
+    }
+    }
+
+@media screen and (min-width: 481px) and (max-width: 1025px)  {
+    .enveloppe {
+        max-width: 56px;
+    }
+    .container-xs,
+    .container-xxs {
+        max-width: 100%;
+        padding: 80px 40px 0px 40px;
+    }
+    .texte-inscription {
+        max-width: 360px;
+    }
+    .newsletter-titre {
+        font-size: 20px;
+    }
+    .home .email-newsletter {
+        width: 530px!important;
+    }
+    .header-mobile {
+        width: 75%;
+        left: 6%;
+    }
+    .icones-flex .cta.transparent {
+        margin: 40px 10px 0px 10px;
+    }
+    .anime {
+        position: initial;
+        margin: 40px 0px;
+    }
+}

@@ -1,0 +1,226 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+    margin: auto;
+}
+.single-realisations .slick-slide img {
+    margin: 0px;
+}
+.single-item .slick-slide img
+{
+    object-fit: cover;
+    height: 600px;
+    width: 1170px;
+    border-radius: 12px;
+}
+.single-item {
+    margin: 40px auto 50px auto;
+    max-width: 1170px;
+}
+.slide-atelier .slick-slide img {
+    object-fit: cover;
+    width: 576px;
+    height: 730px;
+    border-radius: 12px;
+}
+.slide-atelier {
+    max-width: 576px;
+    max-height: 730px;
+}
+.association-slide {
+    margin: 60px 0px 120px 0px;
+}
+.association-slide .slick-slide img {
+    object-fit: cover;
+    width: 570px;
+    height: 450px;
+    opacity: 0.5!important;
+}
+.association-slide .slick-center img {
+    opacity: 1!important;
+}
+.association-slide .slick-slide {
+    padding: 0px 10px;
+}
+.slide-partenaires {
+    max-width: 800px;
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.slide-partenaires .slick-slide img {
+    margin: 20px auto;
+    object-fit: contain;
+    height: 140px;
+    width: 140px;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slide-equipe img {
+    object-fit: cover;
+    width: 250px;
+    height: 300px;
+    margin: 35px 25px 10px 25px;
+}
+.home .atelier-slide {
+    max-height: 600px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-device-width : 480px) {
+.single-item .slick-slide img {
+    object-fit: cover;
+    height: 470px;
+    width: 335px;
+    border-radius: 12px;
+    margin: auto;
+    }
+.single-realisations .image-mobilier img {
+    object-fit: cover;
+    width: 545px;
+    height: 395px;
+    border-radius: 12px;
+    }
+.slide-partenaires {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+.slide-atelier {
+    max-width: 335px;
+}
+.association-slide .slick-slide img {
+    width: 265px;
+    height: 200px;
+}
+.home .atelier-slide {
+    height: fit-content;
+}
+.equipe-position, .equipe-nom {
+    text-align: center;
+}
+.slide-equipe img {
+    margin: auto;
+}
+.equipe-position {
+    max-width: none;
+    margin-bottom: 50px;
+}
+}
+@media screen and (min-width: 481px) and (max-width: 1024px)  {
+    .single-realisations .slick-slide img {
+        margin: auto;
+    }
+    .titre-realisations {
+        text-align: center;
+    }
+    .other-products .slick-prev {
+        right: 15%!important;
+    }
+    .slide-partenaires {
+        margin-top: 10px;
+    }
+}
